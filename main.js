@@ -18,11 +18,12 @@ function Middle(arrlevelStud) {
 }
 var middlelevel = Middle(levelStud);
 
-var student = [];
 
 
-function addArrNameFromSomething() {
-	var arrNameOfStudents = [
+
+function addArrStudFromSomething() {
+	var student = [];
+	var arrStudents = [
     'Vasyl Bereza',
     'Kolya White',
     'Ulyana Yong',
@@ -31,18 +32,18 @@ function addArrNameFromSomething() {
     'Nazar Kulya'];
 
 
-	for (i = 0; i < arrNameOfStudents.length; i++) {
-		student[i] = new Student(arrNameOfStudents[i]);
+	for (i = 0; i < arrStudents.length; i++) {
+		student[i] = new Student(arrStudents[i]);
 	}
 	return student;
 }
-student = addArrNameFromSomething();
+var student = addArrStudFromSomething();
 
 function setRandomKnowledge(arrofStudents, stlevel) {
 	for (i = 0; i < arrofStudents.length; i++) {
 		var lev = Math.floor(Math.random() * stlevel.length);
 		arrofStudents[i].setKnowledge(stlevel[lev]);
-//		console.log(lev + ' ' + arrofStudents[i].getName());
+		console.log(lev + ' ' + arrofStudents[i].getName());
 	}
 }
 
